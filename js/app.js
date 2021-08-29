@@ -67,7 +67,7 @@ function changeVideo(condition) {
 function displayError(err) {
   clearFix();
   const errorDiv = document.createElement("div");
-  errorDiv.innerHTML = `<p class="fs-3 text-white bg-warning border text-center rounded p-2"> Please input Corrent Location</p>`;
+  errorDiv.innerHTML = `<p class="fs-3 text-white bg-warning border text-center rounded p-2"> Please input Correct Location</p>`;
   document.getElementById("error-div").appendChild(errorDiv);
 }
 
