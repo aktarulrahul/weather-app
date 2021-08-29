@@ -18,12 +18,13 @@
   <body>
     <main>
       <video
+      id="video"
         playsinline="playsinline"
         autoplay="autoplay"
         muted="muted"
         loop="loop"
       >
-        <source src="./videos//main.mp4" type="video/mp4" />
+        <source  src="./videos//main.mp4" type="video/mp4" />
       </video>
       <div class="container h-100">
         <div
@@ -38,20 +39,29 @@
         >
           <!-- input section -->
           <div class="input-group mb-3 mx-auto">
-            <input type="text" class="form-control" placeholder="City Name" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="City Name"
+              id="temp-location"
+            />
             <button
               class="btn btn-info text-white"
               type="button"
-              id="button-addon2"
+              id="weather-btn"
             >
               Show Weather
             </button>
           </div>
+          <div id="error-div"></div>
           <!-- display Section visually-hidden -->
-          <div id="display-info" class="">
+          <div id="display-info">
             <div class="card weather-card border-0" style="width: 18rem">
               <img id="temp-icon" src="icons/01n.png" class="card-img-top" />
-              <div class="card-body">
+              <p
+                class="card-text text-white text-center"
+                id="temp-name"
+              ></p>
                 <p class="card-text text-white text-center fs-1 fw-bold">
                   <span id="temp-main">29</span>℃
                 </p>
@@ -63,12 +73,12 @@
                   <div class="row">
                     <div class="col-6">
                       <p class="card-text text-white text-center fs-5">
-                        Max <span id="temp-max">29</span>℃
+                        Max<br /><span id="temp-max">29</span>℃
                       </p>
                     </div>
                     <div class="col-6">
                       <p class="card-text text-white text-center fs-5">
-                        Min <span id="temp-min">29</span>℃
+                        Min<br /><span id="temp-min">29</span>℃
                       </p>
                     </div>
                     <div class="col-6">
