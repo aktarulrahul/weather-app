@@ -69,6 +69,7 @@ function displayError(err) {
   const errorDiv = document.createElement("div");
   errorDiv.innerHTML = `<p class="fs-3 text-white bg-warning border text-center rounded p-2"> Please input Correct Location</p>`;
   document.getElementById("error-div").appendChild(errorDiv);
+  document.getElementById("temp-location").value = "";
 }
 
 function displayInfo(data) {
@@ -86,4 +87,5 @@ function displayInfo(data) {
   ).src = `../icons/${data.weather[0].icon}.png`;
 
   changeVideo(data.weather[0].icon);
+  document.getElementById("temp-location").value = "";
 }
