@@ -5,9 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <main>
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source src="./videos//main.mp4" type="video/mp4" />
+      </video>
+      <div class="container h-100">
+        <div
+          class="
+            d-flex
+            flex-column
+            h-100
+            text-center
+            align-items-center
+            justify-content-center
+          "
+        >
+          <!-- input section -->
+          <div class="input-group mb-3 mx-auto">
+            <input type="text" class="form-control" placeholder="City Name" />
+            <button
+              class="btn btn-info text-white"
+              type="button"
+              id="button-addon2"
+            >
+              Show Weather
+            </button>
+          </div>
+          <!-- display Section visually-hidden -->
+          <div id="display-info" class="">
+            <div class="card weather-card border-0" style="width: 18rem">
+              <img id="temp-icon" src="icons/01n.png" class="card-img-top" />
+              <div class="card-body">
+                <p class="card-text text-white text-center fs-1 fw-bold">
+                  <span id="temp-main">29</span>℃
+                </p>
+                <p class="card-text text-white text-center">
+                  Feels like <span id="temp-feel">29</span>℃
+                </p>
+                <!-- Other Info Start -->
+                <div class="container text-white text-center">
+                  <div class="row">
+                    <div class="col-6">
+                      <p class="card-text text-white text-center fs-5">
+                        Max <span id="temp-max">29</span>℃
+                      </p>
+                    </div>
+                    <div class="col-6">
+                      <p class="card-text text-white text-center fs-5">
+                        Min <span id="temp-min">29</span>℃
+                      </p>
+                    </div>
+                    <div class="col-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="currentColor"
+                        class="bi bi-sunrise-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708l1.5-1.5zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"
+                        />
+                      </svg>
+                      <p id="sun-rise">6:00 AM</p>
+                    </div>
+                    <div class="col-6">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="currentColor"
+                        class="bi bi-sunset-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708l1.5 1.5zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"
+                        />
+                      </svg>
+                      <p id="sun-set">6:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Other Info End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom CSS -->
     <script src="js/app.js"></script>
   </body>
 </html>
