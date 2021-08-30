@@ -40,27 +40,27 @@ function changeVideo(condition) {
   console.log(condition);
   const mist = "50d";
   if (condition.includes("n")) {
-    document.getElementById("video").setAttribute("src", "../videos/night.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/night.mp4");
   } else if (
     condition.includes("02d") ||
     condition.includes("03d") ||
     condition.includes("04d")
   ) {
-    document.getElementById("video").setAttribute("src", "../videos/cloud.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/cloud.mp4");
   } else if (
     condition.includes("09d") ||
     condition.includes("10d") ||
     condition.includes("11d")
   ) {
-    document.getElementById("video").setAttribute("src", "../videos/rain.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/rain.mp4");
   } else if (condition.includes("13d")) {
-    document.getElementById("video").setAttribute("src", "../videos/snow.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/snow.mp4");
   } else if (condition.includes("1d")) {
-    document.getElementById("video").setAttribute("src", "../videos/sun.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/sun.mp4");
   } else if (condition.includes("50d")) {
-    document.getElementById("video").setAttribute("src", "../videos/mist.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/mist.mp4");
   } else {
-    document.getElementById("video").setAttribute("src", "../videos/main.mp4");
+    document.getElementById("video").setAttribute("src", "./videos/main.mp4");
   }
 }
 
@@ -84,7 +84,7 @@ function displayInfo(data) {
   setValue("sun-set", weatherTime(data.sys.sunset));
   document.getElementById(
     "temp-icon"
-  ).src = `../icons/${data.weather[0].icon}.png`;
+  ).src = `./icons/${data.weather[0].icon}.png`;
 
   changeVideo(data.weather[0].icon);
   document.getElementById("temp-location").value = "";
